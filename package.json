@@ -1,11 +1,11 @@
 {
   "name": "clockbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A time-based data store",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "mocha --compilers js:6to5/register",
-    "prepublish": "6to5 -d dist index.js"
+    "prepublish": "6to5 -d dist lib"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,10 @@
   "devDependencies": {
     "6to5": "^2.13.7",
     "mocha": "^2.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "6to5ify"
+    ]
   }
 }
