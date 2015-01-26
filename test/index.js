@@ -20,4 +20,27 @@ describe("ClockBox", function() {
     });
   });
 
+  describe("#fetchDay", function() {
+    it("should return all the data for a given day", function() {
+      var c = new ClockBox("3/17/2015", "3/19/2015"),
+          date = new Date("2015-03-18"),
+          daysData;
+      date.setHours(12); c.store(date, "12");
+      date.setHours(14); c.store(date, "14");
+
+      daysData = c.fetchDay(date);
+      assert(daysData[12] === "12" && daysData[14] === "14");
+    });
+
+    it("should return only those hours with data", function() {
+      var c = new ClockBox("3/17/2015", "3/19/2015"),
+          date = new Date("2015-03-18"),
+          daysData;
+      date.setHours(12); c.store(date, "12");
+      date.setHours(14); c.store(date, "14");
+
+      daysData = c.fetchDay(date);
+      assert(Object.keys(daysData).length === 2);
+    });
+  });
 });
