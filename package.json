@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:6to5/register",
-    "prepublish": "6to5 -d dist lib"
+    "prepublish": "6to5 -d dist index.js"
   },
   "repository": {
     "type": "git",
