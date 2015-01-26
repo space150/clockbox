@@ -1,0 +1,29 @@
+{
+  "name": "clockbox",
+  "version": "1.0.0",
+  "description": "A time-based data store",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --compilers js:6to5/register",
+    "prepublish": "6to5 -d dist lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/space150/clockbox"
+  },
+  "keywords": [
+    "time",
+    "date",
+    "data"
+  ],
+  "author": "Mike Anderson, space150",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/space150/clockbox/issues"
+  },
+  "homepage": "https://github.com/space150/clockbox",
+  "devDependencies": {
+    "6to5": "^2.13.7",
+    "mocha": "^2.1.0"
+  }
+}
