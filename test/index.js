@@ -21,7 +21,7 @@ describe("ClockBox", function() {
   });
 
   describe("#clear", function() {
-    it("clear data for the given hour", function() {
+    it("should clear data for the given hour", function() {
       var c = new ClockBox("3/17/2015", "3/19/2015"),
           date = new Date("2015-03-18T14:00:00Z");
       c.store(date, "wut");
