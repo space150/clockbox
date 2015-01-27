@@ -30,7 +30,7 @@ c = new ClockBox("1/25/2015", "1/31/2015");
 The `date` here (and for `#fetch`, etc.) can be a Date instance or a string
 which Date can parse.
 
-```
+```js
 var datestring = "1/26/2015 14:00";
 
 c.store(datestring, "data!");
@@ -39,7 +39,7 @@ c.store(datestring, "data!");
 
 ### c.fetch(date)
 
-```
+```js
 c.fetch(datestring); // => "data!"
 ```
 
@@ -49,7 +49,7 @@ c.fetch(datestring); // => "data!"
 This will return an Array-like object (the keys are Numbers) containing only
 the hours which hold data.
 
-```
+```js
 c.fetchDay(datestring)[14]; // => "data!"
 ```
 
@@ -58,7 +58,7 @@ c.fetchDay(datestring)[14]; // => "data!"
 
 This is the same as doing `c.store(datestring, null)`.
 
-```
+```js
 c.clear(datestring);
 c.fetch(datestring); // => null
 ```
