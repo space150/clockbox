@@ -1,6 +1,6 @@
 {
   "name": "clockbox",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A time-based data store",
   "main": "./dist/index.js",
   "scripts": {
@@ -23,8 +23,10 @@
     "url": "https://github.com/space150/clockbox/issues"
   },
   "homepage": "https://github.com/space150/clockbox",
+  "dependencies": {
+    "6to5": "3.1.0"
+  },
   "devDependencies": {
-    "6to5": "^2.13.7",
     "mocha": "^2.1.0"
   },
   "browserify": {
