@@ -1,12 +1,12 @@
 {
   "name": "clockbox",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A time-based data store",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "mocha --compilers js:6to5/register",
-    "prepublish": "./node_modules/.bin/6to5 -d dist lib",
-    "postinstall": "./node_modules/.bin/6to5 -d dist lib"
+    "test": "mocha --compilers js:babel/register",
+    "prepublish": "./node_modules/.bin/babel -d dist lib",
+    "postinstall": "./node_modules/.bin/babel -d dist lib"
   },
   "repository": {
     "type": "git",
@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/space150/clockbox",
   "dependencies": {
-    "6to5": "3.1.0"
+    "babel": "4.0.1"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
   },
   "browserify": {
     "transform": [
-      "6to5ify"
+      "babelify"
     ]
   }
 }

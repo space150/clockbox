@@ -1,5 +1,9 @@
 # clockbox changelog
 
+### 1.0.7 (February 15, 2015)
+
+- Switch from 6to5 to Babel (http://babeljs.io/blog/2015/02/15/not-born-to-die/)
+
 ### 1.0.6 (January 27, 2015)
 
 - Fix installation bug
